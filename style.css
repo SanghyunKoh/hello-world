@@ -1,0 +1,46 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+img {
+	object-fit: contain;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100vw;
+}
+
+.grid-item { 
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(300, 300, 300, 0.8);
+  font-size: 30px;
+}
+
+.grid-item > img{ width:100%; }
+
+.thecard {
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease;
+	perspective: 50000px;
+	}
+
+.thecard:hover{
+	transform: rotateY(180deg);
+}
+
+.thefront{
+	position: absolute;
+	backface-visibility: hidden;
+	border-radius: 20px;
+}
+
+.theback{
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+
